@@ -1,0 +1,55 @@
+<header [style.padding-top]="activeRoute() == '/' ? 'calc(100vh + 2em)' : '8em'">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav, #navbarNav2"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" routerLink="/">
+      <img src="../assets/logo.svg" width="30" height="30" alt="" loading="lazy"> Travular
+    </a>
+    <div class="collapse navbar-collapse mr-4" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/travel">Travel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart"><i class="fas fa-shopping-cart"></i><span
+              class="badge badge-dark ml-2" *ngIf="cartItems.length > 0">{{ cartItems.length }}</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="hero" *ngIf="activeRoute() == '/'">
+    <div class="p-4 text-center">
+      <h1 class="display-3 text-white">Welcome to Travular</h1>
+      <h2 class="display-4 text-white">
+        the world's #1 travel service provider!
+      </h2>
+      <div class="hr my-4"></div>
+      <div class="row row-cols-2">
+        <ng-container *ngFor="let product of products | slice:0:2; let i = index">
+          <div class="col">
+            <div class="card m-2">
+              <img src="{{ product.image }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ product.hotel.name }} {{ "★".repeat(product.hotel.rating) }} in
+                  {{ product.destination }}<span class="badge badge-success ml-2"
+                    *ngIf="discount(product)">{{ discount(product)*100 }}% discount</span><span class="ml-2"
+                    [style.text-decoration]="discount(product) ? 'line-through' : 'none'">{{ product.price }}€</span><span
+                    class="font-weight-bold text-success ml-2"
+                    *ngIf="discount(product)">{{ product.price - (product.price * discount(product))}}€</span><button class="btn btn-secondary ml-4" (click)="add(product)">Add</button>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,22 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let cardItem of cardItems">
+    <ul class="list-group list-group-horizontal-md w-100">
+      <li class="list-group-item">
+        {{ cardItem.hotel.name }} {{ "★".repeat(cardItem.hotel.rating) }} in {{ cardItem.destination }}
+      </li>
+      <li class="list-group-item">
+        {{ cardItem.price }}€
+      </li>
+    </ul>
+  </li>
+  <li class="list-group-item list-group-item-dark">
+    <ul class="list-group list-group-horizontal-md w-100">
+      <li class="list-group-item">
+        {{ cardItems.length }} travels
+      </li>
+      <li class="list-group-item">
+        {{ cardItems.getSum() }}
+      </li>
+    </ul>
+  </li>
+</ul>
