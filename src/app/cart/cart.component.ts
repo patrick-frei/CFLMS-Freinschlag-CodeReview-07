@@ -7,17 +7,17 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cardItems;
+  cartItems;
   constructor(private cartService: CartService) { }
 
   ngOnInit() {
-    this.cardItems = this.cartService.cartItems;
+    this.cartItems = this.cartService.cartItems;
   }
 
   getSum() {
-    let sum;
-    for (let cardItem of this.cardItems) {
-      sum = sum + cardItem.price;
+    let sum: number = 0;
+    for (let cartItem of this.cartItems) {
+      sum += Number(cartItem.price);
     }
     return sum;
   }
