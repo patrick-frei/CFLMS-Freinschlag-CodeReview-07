@@ -3,7 +3,7 @@
     <div class="card m-2">
       <img src="{{ product.image }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ product.hotel.name }} {{ "★".repeat(product.hotel.rating) }} in {{ product.destination }}<span class="badge badge-success ml-2" *ngIf="discount(product)">{{ discount(product)*100 }}% discount</span>
+        <h5 class="card-title">{{ product.duration }} nights in {{ product.hotel.name }} {{ "★".repeat(product.hotel.rating) }} in {{ product.destination }}<span class="badge badge-success ml-2" *ngIf="discount(product)">{{ discount(product)*100 }}% discount</span>
         </h5>
         <p class="card-text">{{ product.description }}</p>
         <p class="card-text"><span

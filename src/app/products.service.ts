@@ -16,7 +16,8 @@ export class ProductsService {
       end: new Date("1995-12-24")
     }],
     price: 649,
-    image: "assets/crete.jpg"
+    image: "assets/crete.jpg",
+    duration: 7
   }, {
     description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     destination: "Canberra",
@@ -35,7 +36,8 @@ export class ProductsService {
       end: new Date("1995-12-24")
     }],
     price: 204,
-    image: "assets/canberra.jpg"
+    image: "assets/canberra.jpg",
+    duration: 7
   }, {
     description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     destination: "California",
@@ -48,7 +50,8 @@ export class ProductsService {
       end: new Date("1995-12-24")
     }],
     price: 100,
-    image: "assets/california.jpg"
+    image: "assets/california.jpg",
+    duration: 7
   }, {
     description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     destination: "Thailand",
@@ -61,7 +64,8 @@ export class ProductsService {
       end: new Date("1995-12-24")
     }],
     price: 649,
-    image: "assets/thailand.jpg"
+    image: "assets/thailand.jpg",
+    duration: 7
   }, {
     description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     destination: "Mallorca",
@@ -74,7 +78,8 @@ export class ProductsService {
       end: new Date("1995-12-24")
     }],
     price: 649,
-    image: "assets/mallorca.jpg"
+    image: "assets/mallorca.jpg",
+    duration: 7
   }];
   constructor() { }
   discount(product) {
